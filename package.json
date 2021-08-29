@@ -1,0 +1,44 @@
+{
+  "name": "NodeJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "babel ./assets/scripts/add.js --out-file ./assets/scripts/add-built.js",
+    "server:dev": "cross-env NODE_ENV=development supervisor -e html,js,css app.js",
+    "server:prod": "cross-env NODE_ENV=production supervisor -e html,js,css app.js",
+    "docs": "jsdoc ./**/*.js -d ./docs/jsdocs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WushangTi/NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WushangTi/NodeJS/issues"
+  },
+  "homepage": "https://github.com/WushangTi/NodeJS#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "koa": "^2.13.1",
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "log4js": "^6.3.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-modules-systemjs": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "jsdoc": "^3.6.7",
+    "koa-swig": "^2.2.1",
+    "supervisor": "^0.12.0"
+  }
+}
